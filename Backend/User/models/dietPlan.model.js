@@ -23,7 +23,6 @@ const dietPlanSchema = new mongoose.Schema(
 
         totalCalories: {
             type: Number,
-            required: true
         },
         createdBy: {
             type: mongoose.Schema.Types.ObjectId,

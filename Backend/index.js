@@ -3,6 +3,9 @@ import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 import userRoutes from "./User/routes/user.routes.js";
+import foodRoutes from "./User/routes/food.routes.js";
+import dietRoutes from "./User/routes/diet.routes.js";
+import reciepeRoutes from "./User/routes/reciepe.routes.js";
 import connectDB from "./utils/db.js";
 
 dotenv.config();
@@ -22,6 +25,9 @@ app.use(cors(corsOptions));
 
 
 app.use("/api/v1/user", userRoutes)
+app.use("/api/v1/food", foodRoutes)
+app.use("/api/v1/diet", dietRoutes)
+app.use("/api/v1/reciepe", reciepeRoutes)
 
 const PORT = process.env.PORT;
 
