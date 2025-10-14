@@ -1,6 +1,6 @@
 import express from "express";
-import isAuthenticated from "../../middleware/AuthMiddleware.js";
 import { createRecipe } from "../Controller/recipe.controller.js";
+import isAuthenticated from "../../middleware/authMiddleware.js";
 
 const router = express.Router();
 

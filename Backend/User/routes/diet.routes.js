@@ -1,5 +1,5 @@
 import express from "express";
-import isAuthenticated from "../../middleware/AuthMiddleware.js";
+import isAuthenticated from "../../middleware/authMiddleware.js";
 import { AIGeneratedPlan, GetDayDietPlan, GetDietPlans, MealPlan } from "../Controller/diet.controller.js";
 
 const router = express.Router();
