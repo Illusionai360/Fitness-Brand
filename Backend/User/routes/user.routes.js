@@ -9,6 +9,5 @@ router.post("/register", Register, isAuthenticated);
 router.post("/login", Login, isAuthenticated);
 router.post("/logout", isAuthenticated, Logout);
 router.get("/get-user", isAuthenticated, GetUserById);
-router.get("/get-food", GetAllFood);
 
 export default router;

@@ -12,6 +12,7 @@ const genAI = new GoogleGenAI({
 export const GetAllFood = async (req, res) => {
 
     const query = req.query.query?.toLowerCase();
+    
     if (!query) {
         return res.status(400).json({
             message: "Query is required"
