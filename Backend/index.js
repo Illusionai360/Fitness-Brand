@@ -32,8 +32,22 @@ app.use("/api/v1/reciepe", reciepeRoutes)
 const PORT = process.env.PORT;
 
 
-app.listen(PORT, () => {
-    connectDB()
-    console.log(`Server is running on port ${PORT}`);
-})
+const startServer = async () => {
+    try {
 
+        await connectDB();
+
+        app.listen(PORT, () => {
+            console.log(`Server is running on port ${PORT}`);
+        })
+
+    } catch (error) {
+
+        console.error("Failed to connect to the database:", error);
+
+        process.exit(1);
+    }
+}
+
+
+startServer();
