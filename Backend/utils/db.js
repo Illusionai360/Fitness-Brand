@@ -34,7 +34,7 @@ import mongoose from "mongoose";
 
 const connectDB = async () => {
     try {
-        await mongoose.connect("mongodb+srv://infoillusionai_db_user:XJ3EHdjhA0l8Ng4X@fitnessbrand.tcriyun.mongodb.net/?retryWrites=true&w=majority&appName=fitnessbrand");
+        await mongoose.connect(process.env.MONGO_URI);
         console.log('mongodb connected successfully');
     } catch (error) {
         console.log(error);
