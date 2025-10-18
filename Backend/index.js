@@ -1,4 +1,6 @@
 import express from "express";
+import dotenv from "dotenv";
+
 import cookieParser from "cookie-parser";
 import cors from "cors";
 import userRoutes from "./User/routes/user.routes.js";
@@ -8,6 +10,7 @@ import reciepeRoutes from "./User/routes/reciepe.routes.js";
 import connectDB from "./utils/db.js";
 
 const app = express();
+dotenv.config();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }))
