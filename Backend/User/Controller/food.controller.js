@@ -1,8 +1,5 @@
 import { GoogleGenAI } from "@google/genai"
-import dotenv from "dotenv"
 import Food from "../models/Food.model.js";
-
-dotenv.config();
 
 const genAI = new GoogleGenAI({
     apiKey: `${process.env.GEMINI_API_KEY}`
