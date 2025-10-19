@@ -46,6 +46,17 @@ const userSchema = new mongoose.Schema(
         activityLevel: {
             type: JSON,
         },
+
+        createdByTrainer: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "Trainer", // null if user created himself
+            default: null,
+        },
+        assignedTrainer: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "Trainer",
+            default: null,
+        },
     },
     { timestamps: true }
 );

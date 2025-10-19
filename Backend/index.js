@@ -7,6 +7,7 @@ import userRoutes from "./User/routes/user.routes.js";
 import foodRoutes from "./User/routes/food.routes.js";
 import dietRoutes from "./User/routes/diet.routes.js";
 import reciepeRoutes from "./User/routes/reciepe.routes.js";
+import trainerRoutes from "./Trainer/routes/trainer.routes.js";
 import connectDB from "./utils/db.js";
 
 const app = express();
@@ -29,6 +30,7 @@ app.use("/api/v1/user", userRoutes)
 app.use("/api/v1/food", foodRoutes)
 app.use("/api/v1/diet", dietRoutes)
 app.use("/api/v1/reciepe", reciepeRoutes)
+app.use("/api/v1/trainer", trainerRoutes)
 
 const PORT = process.env.PORT;
 
@@ -49,6 +51,5 @@ const startServer = async () => {
         process.exit(1);
     }
 }
-
 
 startServer();
