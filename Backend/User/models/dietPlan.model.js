@@ -35,6 +35,10 @@ const dietPlanSchema = new mongoose.Schema(
         updatedAt: {
             type: Date,
             default: Date.now
+        },
+        assignedTo: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "User",    
         }
     },
     {
